@@ -1,6 +1,10 @@
-import os
-
+import os, sys, inspect
+print(sys.version)
+print(sys.executable)
+import pip
+pip.main(['list'])
 import torch
+inspect.getfile(torch)
 from setuptools import find_packages, setup
 from torch.utils.cpp_extension import BuildExtension, CppExtension, CUDAExtension
 
